@@ -81,9 +81,9 @@ Below is a (very) rough guide for interpreting the signal strength:
 | Strength | Interpretation |
 | --- | --- |
 | x ≥ -30dBm | Very strong signal (Very close) |
-| -30dBm> x ≥60dBm | Good signal (Rather close) |
-| -60dBm> x ≥70dBm | Decent signal (Fairly close) |
-| x <70dBm | Weak signal (Far away) |
+| -30dBm> x ≥-60dBm | Good signal (Rather close) |
+| -60dBm> x ≥-70dBm | Decent signal (Fairly close) |
+| x <-70dBm | Weak signal (Far away) |
 
 
 ## Installing other dependencies
@@ -111,7 +111,7 @@ As for compatibility with other operating systems, I believe that the methods us
 
 ## Limiting factors
 
-IOS: Since IOS 8, a [new feature](https://www.theverge.com/2014/6/9/5792970/ios-8-strikes-an-unexpected-blow-against-location-tracking)has been in place to mitigate the privacy issues related to Wi-Fi scanning:
+IOS: Since IOS 8, a [new feature](https://www.theverge.com/2014/6/9/5792970/ios-8-strikes-an-unexpected-blow-against-location-tracking) has been in place to mitigate the privacy issues related to Wi-Fi scanning:
 
 Android: To prevent your Android devices from leaking their PNL, you can install Wi-Fi Privacy Police](https://github.com/BramBonne/privacypolice) from the Play Store.
 
