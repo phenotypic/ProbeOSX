@@ -19,7 +19,12 @@ cd $HOME/ProbeOSX && bash ProbeOSX.sh
 
 ## Removal
 
-As mentioned above, ProbeOSX is self contained and therefore can simply be removed from the computer by dragging the script into the Trash if you don't want it any more as no files or folders are created by the script apart from those you explicitly ask for it to create in either the form of a rainbow table or a search result.
+As mentioned above, ProbeOSX is self contained and therefore can simply be removed from the computer by dragging the script into the Trash if you don't want it any more as no files or folders are created by the script.
+
+If you downloaded via `git clone`, you can simple run the following command to remove ProbeOSX:
+```
+sudo rm -r $HOME/ProbeOSX
+```
 
 
 ## Usage
@@ -111,7 +116,7 @@ As for compatibility with other operating systems, I believe that the methods us
 
 ## Limiting factors
 
-IOS: Since IOS 8, a [new feature](https://www.theverge.com/2014/6/9/5792970/ios-8-strikes-an-unexpected-blow-against-location-tracking) has been in place to mitigate the privacy issues related to Wi-Fi scanning:
+IOS: Since IOS 8, a [new feature](https://www.theverge.com/2014/6/9/5792970/ios-8-strikes-an-unexpected-blow-against-location-tracking) has been in place to mitigate the privacy issues related to Wi-Fi scanning.
 
 Android: To prevent your Android devices from leaking their PNL, you can install Wi-Fi Privacy Police](https://github.com/BramBonne/privacypolice) from the Play Store.
 
