@@ -40,7 +40,7 @@ The output formats are as below:
 
 3. Next, if you selected detailed output, the script should auto-detect the MAC vendor list included in the repository and ask you if this is the one you want to use. If either the script does not detect the included MAC vendor list or you would like to use a custom list, follow the on screen instructions.  If you would like to use a custom lookup table, make sure it follows this format:
 ```
-<VENDORID>		<VENDORNAME>
+<VENDORID>	<VENDORNAME>
 00000E	Fujitsu
 FCE998	Apple, Inc.
 ...
