@@ -12,10 +12,10 @@ ProbeOSX is a simple tool written in Bash which allows for Mac users to sniff fo
 Before using the script, make sure to read the [Terms of Use](#terms-of-use) section. 
 
 The script is self contained so you can either simply download the script via the "Download ZIP" button above, decompress the file, open Terminal, type `bash `, drag in the script and press enter. (`bash <path/to/the/script.sh>`). Or, you can use the command line (recommended):
-
-`git clone https://github.com/Tommrodrigues/ProbeOSX`
-`cd $HOME/ProbeOSX && bash ProbeOSX.sh`
-
+```
+git clone https://github.com/Tommrodrigues/ProbeOSX
+cd $HOME/ProbeOSX && bash ProbeOSX.sh
+```
 
 ## Removal
 
