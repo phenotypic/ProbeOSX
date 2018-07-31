@@ -111,14 +111,14 @@ As for compatibility with other operating systems, I believe that the methods us
 
 3. You may not be able to use your internet connectivity while the script is in use due to the fact that the Wi-Fi interface is put into monitor mode. However, there *have* been instances where I have been able to access the internet while the script was in use.
 
-4. As mentioned in the [Usage](#usage) section, the script was designed to ensure that the same combination of MAC address and target network will not be displayed more than once and that the script automatically eliminates any "bad" probe requests, I.e. any that contain `bad-fcs` or and which have an empty target network.
+4. As mentioned in the [Usage](#usage) section, the script can ignore the same combination of MAC address and target network. The script also automatically eliminates any "bad" probe requests, i.e. any that contain `bad-fcs` or and which have an empty target network.
 
 
 ## Limiting factors
 
 IOS: Since IOS 8, a [new feature](https://www.theverge.com/2014/6/9/5792970/ios-8-strikes-an-unexpected-blow-against-location-tracking) has been in place to mitigate the privacy issues related to Wi-Fi scanning.
 
-Android: To prevent your Android devices from leaking their PNL, you can install Wi-Fi Privacy Police](https://github.com/BramBonne/privacypolice) from the Play Store.
+Android: To prevent your Android devices from leaking their PNL, you can install [Wi-Fi Privacy Police](https://github.com/BramBonne/privacypolice) from the Play Store.
 
 This sort of "attack" can also be mitigated by emitting a huge volume of random probe requests through a tool such as the [ESP8266 Deauther](https://github.com/spacehuhn/esp8266_deauther) which will overwhelm the script.
 
