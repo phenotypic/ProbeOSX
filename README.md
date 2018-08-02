@@ -1,5 +1,5 @@
 # ProbeOSX
-#### A simple tool for macOS to capture probe requests.
+#### A simple tool for macOS to capture and interpret probe requests.
 
 
 ## What is it?
