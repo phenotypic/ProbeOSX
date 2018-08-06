@@ -143,6 +143,11 @@ After looking all around GitHub, it was only rarely that I cam across such a too
 First, please have a look in the terminal window and see if there are any errors not mentioned in the readme; if so, please post them in the [Issues](https://github.com/Tommrodrigues/ProbeOSX/issues) section. Next, while the script is scanning, have a look at the menu bar on the top of your screen, you should see an "eye" inside the Wi-Fi icon indicating that you have successfully entered monitor mode. If you have verified this then the chances are that there are just no probe requests going around, this is a good thing! This is common if you live in an isolated area without many Wi-Fi enabled devices. Even if you do own such devices, as mentioned in the [Limiting factors](#limiting-factors) section, many modern devices have been updated to ensure that no unnecessary probe requests are sent out in an effort to increase your privacy. However, you can test whether this is the case by going into the Wi-Fi settings of an IOS device, pressing "Other" and entering random details then pressing Connect; this should force your device to make a probe request.
 
 
+> I'm receiving an error like `tcpdump: en0: You don't have permission to capture on that device...` what do I do?
+
+Usually, this is a fairly easy fix. Follow the steps linked [here](https://stackoverflow.com/questions/41126943/wireshark-you-dont-have-permission-to-capture-on-that-device-mac) to resolve the problem.
+
+
 > How does ProbeOSX work? Is it safe?
 
 Feel free to look over the code for ProbeOSX included in the repository and have a look at it for yourself. It is by no means the most elegant code but it gets the job done ;) You can also get a brief overview of how it works by reading the rest of this readme page. As for whether or not ProbeOSX is safe, this first depends on what you mean by "safe". If you are concerned about this damaging your computer (e.g. frying the graphics card, breaking the wireless card etc.), I have personally never experienced any problems with my computer after using ProbeOSX as it is not very demanding but this may differ from device to device especially if you have a less powerful Mac. Be sure to refer to the [Terms of Use](#terms-of-use)!
