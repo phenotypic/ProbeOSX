@@ -63,7 +63,7 @@ listening on en0, link-type IEEE802_11_RADIO (802.11 plus radiotap header), capt
 
 You can simply ignore this message. Now, the intercepted probe requests should come flooding in as shown in the example below:
 
-![Example](https://image.ibb.co/g7EJTo/Example.png)
+![Example](https://image.ibb.co/i7sxo9/Screen.png)
 
 It is important to note that the script automatically eliminates any "bad" probe requests, I.e. any that contain `bad-fcs` or and which have an empty target network in an effort to make it easier for the user to interpret.
 
