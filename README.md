@@ -33,7 +33,7 @@ Be sure to read both the [Terms of Use](#terms-of-use) and the [Important usage 
 
 The script was designed with ease of use in mind so most people shouldn't find it too hard to work themselves through the various options. However, if you would like more guidance or information, read below:
 
-1. After starting the script with either `bash <path/to/the/script.sh>` or cd `$HOME/ProbeOSX && bash ProbeOSX.sh` if you cloned it, you will be prompted with a message asking you to verify whether the auto-detected Wi-Fi interface is indeed correct. You can check this by holding down the `option` key and then clicking on the Wi-Fi icon on the top of your screen which should read on the top line"`Interface Name: <interface>`". If the listed interface does not match that of the auto-detected one then choose `n` and proceed to enter the correct interface when prompted, otherwise, select `y`.
+1. After starting the script with either `bash <path/to/the/script.sh>` or `cd $HOME/ProbeOSX && bash ProbeOSX.sh` if you cloned it; you will be prompted with a message asking you to verify whether the auto-detected Wi-Fi interface is indeed correct. You can check this by holding down the `option` key and then clicking on the Wi-Fi icon on the top of your screen which should read on the top line"`Interface Name: <interface>`". If the listed interface does not match that of the auto-detected one then choose `n` and proceed to enter the correct interface when prompted, otherwise, select `y`.
 
 2. Now, you will be asked whether you want to use the detailed output (y) or the simple output (n). It is recommended that you use the detailed output, but the simple output can be useful in some circumstances.
 The output formats are as below:
