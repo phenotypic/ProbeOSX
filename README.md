@@ -113,7 +113,7 @@ As for compatibility with other operating systems, I believe that the methods us
 
 3. ProbeOSX does not handle spaces in the file path well e.g. `/Users/tom/Desktop/mac vendor tables/table.txt` would not work so try to avoid spaces.
 
-4. You may not be able to use your internet connectivity while the script is in use due to the fact that the Wi-Fi interface is put into monitor mode. However, there *have* been instances where I have been able to access the internet while the script was in use.
+4. You will not be able to use Wi-Fi while the script is in use due to the fact that the Wi-Fi interface is put into monitor mode.
 
 5. As mentioned in the [Usage](#usage) section, the script can ignore the same combination of MAC address and target network. The script also automatically eliminates any "bad" probe requests, i.e. any that contain `bad-fcs` or and which have an empty target network.
 
