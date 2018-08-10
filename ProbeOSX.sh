@@ -135,7 +135,9 @@ printf "\n${GREEN}[*] ${NC}Ignore identical requests: ${CYAN}$ignoreidenticalono
 echo
 echo
 echo
-echo
+printf "${DARKGRAY}"
+echo "Have you disconnected from your current Wi-Fi network?" | fmt -c -w $COLUMNS
+printf "${NC}"
 echo
 echo
 echo "Terms of Use" | fmt -c -w $COLUMNS
