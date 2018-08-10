@@ -31,6 +31,8 @@ sudo rm -r $HOME/ProbeOSX
 
 Be sure to read both the [Terms of Use](#terms-of-use) and the [Important usage notes](#important-usage-notes) sections before using the script.
 
+**NOTE:** Ensure that you have disconnected from any Wi-Fi networks before using the script or you'll only be able to find probe requests on the same channel as your current Wi-Fi network.
+
 The script was designed with ease of use in mind so most people shouldn't find it too hard to work themselves through the various options. However, if you would like more guidance or information, read below:
 
 1. After starting the script with either `bash <path/to/the/script.sh>` or `cd $HOME/ProbeOSX && bash ProbeOSX.sh` if you cloned it; you will be prompted with a message asking you to verify whether the auto-detected Wi-Fi interface is indeed correct. You can check this by holding down the `option` key and then clicking on the Wi-Fi icon on the top of your screen which should read on the top line"`Interface Name: <interface>`". If the listed interface does not match that of the auto-detected one then choose `n` and proceed to enter the correct interface when prompted, otherwise, select `y`.
@@ -105,13 +107,15 @@ As for compatibility with other operating systems, I believe that the methods us
 
 ## Important usage notes
 
-1. The path you enter MUST be a full path e.g. `/Users/tom/Desktop/table.txt` (i.e. you cannot use `$HOME/Desktop/table.txt` or `~/Desktop/table.txt`)
+1. Ensure that you have disconnected from any Wi-Fi networks before using the script or you'll only be able to find probe requests on the same channel as your current Wi-Fi network.
 
-2. ProbeOSX does not handle spaces in the file path well e.g. `/Users/tom/Desktop/mac vendor tables/table.txt` would not work so try to avoid spaces.
+2. The path you enter MUST be a full path e.g. `/Users/tom/Desktop/table.txt` (i.e. you cannot use `$HOME/Desktop/table.txt` or `~/Desktop/table.txt`)
 
-3. You may not be able to use your internet connectivity while the script is in use due to the fact that the Wi-Fi interface is put into monitor mode. However, there *have* been instances where I have been able to access the internet while the script was in use.
+3. ProbeOSX does not handle spaces in the file path well e.g. `/Users/tom/Desktop/mac vendor tables/table.txt` would not work so try to avoid spaces.
 
-4. As mentioned in the [Usage](#usage) section, the script can ignore the same combination of MAC address and target network. The script also automatically eliminates any "bad" probe requests, i.e. any that contain `bad-fcs` or and which have an empty target network.
+4. You may not be able to use your internet connectivity while the script is in use due to the fact that the Wi-Fi interface is put into monitor mode. However, there *have* been instances where I have been able to access the internet while the script was in use.
+
+5. As mentioned in the [Usage](#usage) section, the script can ignore the same combination of MAC address and target network. The script also automatically eliminates any "bad" probe requests, i.e. any that contain `bad-fcs` or and which have an empty target network.
 
 
 ## Limiting factors
@@ -140,7 +144,7 @@ After looking all around GitHub, it was only rarely that I cam across such a too
 
 > I just ran the script for the first time and I'm not picking anything up! What gives?
 
-First, please have a look in the terminal window and see if there are any errors not mentioned in the readme; if so, please post them in the [Issues](https://github.com/Tommrodrigues/ProbeOSX/issues) section. Next, while the script is scanning, have a look at the menu bar on the top of your screen, you should see an "eye" inside the Wi-Fi icon indicating that you have successfully entered monitor mode. If you have verified this then the chances are that there are just no probe requests going around, this is a good thing! This is common if you live in an isolated area without many Wi-Fi enabled devices. Even if you do own such devices, as mentioned in the [Limiting factors](#limiting-factors) section, many modern devices have been updated to ensure that no unnecessary probe requests are sent out in an effort to increase your privacy. However, you can test whether this is the case by going into the Wi-Fi settings of an IOS device, pressing "Other" and entering random details then pressing Connect; this should force your device to make a probe request.
+First, ensure that you have disconnected from any Wi-Fi networks before using the script or you'll only be able to find probe requests on the same channel as your current Wi-Fi network. Also, have a look in the terminal window and see if there are any errors ; if so, please post them in the [Issues](https://github.com/Tommrodrigues/ProbeOSX/issues) section if they are not mentioned in the readme. Next, while the script is scanning, have a look at the menu bar on the top of your screen, you should see an "eye" inside the Wi-Fi icon indicating that you have successfully entered monitor mode. If you have verified this then the chances are that there are just no probe requests going around, this is a good thing! This is common if you live in an isolated area without many Wi-Fi enabled devices. Even if you do own such devices, as mentioned in the [Limiting factors](#limiting-factors) section, many modern devices have been updated to ensure that no unnecessary probe requests are sent out in an effort to increase your privacy. However, you can test whether this is the case by going into the Wi-Fi settings of an IOS device, pressing "Other" and entering random details then pressing Connect; this should force your device to make a probe request.
 
 
 > I'm receiving an error like `tcpdump: en0: You don't have permission to capture on that device...` what do I do?
