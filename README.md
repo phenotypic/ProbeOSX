@@ -167,7 +167,7 @@ If you've got a question, issue or suggestion to do with the ProbeOSX code, be s
 Rather than attempting to create fully fledged, EULA style, Terms of Use which would undoubtedly be plagued with loop holes, flaws and discourage people from reading it; I thought the better option would be to lay down some of the obvious "don'ts" below.
 
 
-> Woah, cool! I can't wait to go to my local coffee shop/airport/other public place and soak up loads of people's previously connected Wi-Fi networks in an effort to exploit this information.
+> Woah, cool! I can't wait to go to my local coffee shop, airport or other public place and soak up loads of people's previously connected Wi-Fi networks in an effort to exploit this information.
 
 Just a second there, this tool was **NOT** made for you do this! Read the [Motivations](#motivations) section for what this tool *is* made for. Furthermore, we would like to state that we especially prohibit using the tool with the intention of targeting a specific person or a group of people either for the sake of it or to use it as a platform to do something more malicious such as running an Evil Twin attack. We take no responsibility whatsoever for any wrongdoing on your part what so ever as the responsibility of using this script is completely yours.
 
