@@ -7,35 +7,21 @@
 ProbeOSX is a simple tool written in Bash which allows for Mac users to sniff for [probe requests](https://medium.com/@brannondorsey/wi-fi-is-broken-3f6054210fa5) in their local area. This allows the user to get plain text information such as MAC addresses along with those devices previously connected and/or hidden networks. [This](https://www.youtube.com/watch?v=Z8RHMUSYTiA&frags=pl%2Cwn) is an excellent video showing how a Linux user may do the same sort of thing using a similar tool to ProbeOSX. As mentioned in the video, the information that is broadcasted in a probe request can allow for an attacker to create an identical, malicious network which could trick your device into connecting to it; therefore allowing all data traffic to your device to unknowingly be routed through the attackers network. Read the [Motivations](#motivations) section for more information.
 
 
-## Installation
-
-Before using the script, make sure to read the [Terms of Use](#terms-of-use) section. 
-
-The script is self contained so you can either simply download the script via the "Download ZIP" button above, decompress the file, open Terminal, type `bash `, drag in the script and press enter. (`bash <path/to/the/script.sh>`). Or, you can use the command line (recommended):
-```
-git clone https://github.com/Tommrodrigues/ProbeOSX
-cd $HOME/ProbeOSX && bash ProbeOSX.sh
-```
-
-## Removal
-
-As mentioned above, ProbeOSX is self contained and therefore can simply be removed from the computer by dragging the script into the Trash if you don't want it any more as no files or folders are created by the script.
-
-If you downloaded via `git clone`, you can simple run the following command to remove ProbeOSX:
-```
-sudo rm -r $HOME/ProbeOSX
-```
-
-
 ## Usage
 
 Be sure to read both the [Terms of Use](#terms-of-use) and the [Important usage notes](#important-usage-notes) sections before using the script.
+
+Download and run the script with:
+```
+git clone https://github.com/Tommrodrigues/ProbeOSX
+bash ~/ProbeOSX/ProbeOSX.sh
+```
 
 **NOTE:** Ensure that you have disconnected from any Wi-Fi networks before using the script or you'll only be able to find probe requests on the same channel as your current Wi-Fi network.
 
 The script was designed with ease of use in mind so most people shouldn't find it too hard to work themselves through the various options. However, if you would like more guidance or information, read below:
 
-1. After starting the script with either `bash <path/to/the/script.sh>` or `cd $HOME/ProbeOSX && bash ProbeOSX.sh` if you cloned it; you will be prompted with a message asking you to verify whether the auto-detected Wi-Fi interface is indeed correct. You can check this by holding down the `option` key and then clicking on the Wi-Fi icon on the top of your screen which should read on the top line"`Interface Name: <interface>`". If the listed interface does not match that of the auto-detected one then choose `n` and proceed to enter the correct interface when prompted, otherwise, select `y`.
+1. After starting the script with either `bash /path/to/ProbeOSX.sh` or `bash ~/ProbeOSX/ProbeOSX.sh` if you cloned it; you will first be prompted with a message asking you to verify whether the auto-detected Wi-Fi interface is indeed correct. You can check this by holding down the `option` key and then clicking on the Wi-Fi icon on the top of your screen which should read on the top line"`Interface Name: <interface>`". If the listed interface does not match that of the auto-detected one then choose `n` and proceed to enter the correct interface when prompted, otherwise, select `y`.
 
 2. Now, you will be asked whether you want to use the detailed output (y) or the simple output (n). It is recommended that you use the detailed output, but the simple output can be useful in some circumstances.
 The output formats are as below:
@@ -116,6 +102,15 @@ As for compatibility with other operating systems, I believe that the methods us
 4. You will not be able to use Wi-Fi while the script is in use due to the fact that the Wi-Fi interface is put into monitor mode.
 
 5. As mentioned in the [Usage](#usage) section, the script can ignore the same combination of MAC address and target network. The script also automatically eliminates any "bad" probe requests, i.e. any that contain `bad-fcs` or and which have an empty target network.
+
+## Removal
+
+ProbeOSX is self contained and therefore can simply be removed from the computer by dragging the script into the Trash if you don't want it any more as no files or folders are created by the script.
+
+If you downloaded via `git clone`, you can simple run the following command to remove ProbeOSX:
+```
+sudo rm -r $HOME/ProbeOSX
+```
 
 
 ## Limiting factors
