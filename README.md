@@ -86,7 +86,7 @@ As stated above, the script itself is self contained; as such unless you wish to
 
 ## Compatibility, requirements and optimisation
 
-The script was originally written on and for macOS 10.13 but I don't see any real reason why this wouldn't work on previous and future versions of macOS (within reason). The script is not computationally demanding so shouldn't require more than the baseline hardware for most of the Macs made in the last 7-ish years (as long as they have a Wi-Fi card capable of monitor mode)
+The script was originally written on and for macOS 10.13 but I don't see any real reason why this wouldn't work on previous and future versions of macOS (within reason). The script is not computationally demanding so shouldn't require more than the baseline hardware for most of the Macs made in the last 7-ish years (as long as they have a Wi-Fi interface capable of monitor mode)
 
 As for compatibility with other operating systems, I believe that the methods used in this script for intercepting the probe requests are unavailable on Linux so I would recommend using a tool like [ProbeQuest](https://github.com/SkypLabs/probequest) which will work for linux. (This script may indeed work on Linux but it has not been tested so I cannot promise anything.)
 
@@ -104,8 +104,6 @@ As for compatibility with other operating systems, I believe that the methods us
 5. As mentioned in the [Usage](#usage) section, the script can ignore the same combination of MAC address and target network. The script also automatically eliminates any "bad" probe requests, i.e. any that contain `bad-fcs` or and which have an empty target network.
 
 ## Removal
-
-ProbeOSX is self contained and therefore can simply be removed from the computer by dragging the script into the Trash if you don't want it any more as no files or folders are created by the script.
 
 If you downloaded via `git clone`, you can simple run the following command to remove ProbeOSX:
 ```
