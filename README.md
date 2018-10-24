@@ -4,8 +4,7 @@
 
 ## What is it?
 
-ProbeOSX is a simple tool written in Bash which allows for Mac users to sniff for [probe requests](https://medium.com/@brannondorsey/wi-fi-is-broken-3f6054210fa5). This allows the user to get plain text information such as MAC addresses along with those devices previously connected and/or hidden networks. [Here](https://www.youtube.com/watch?v=Z8RHMUSYTiA&frags=pl%2Cwn) is a video showing how a Linux user may do the same sort of thing using a similar tool to ProbeOSX. As mentioned in the video, the information that is broadcasted in a probe request can allow for an attacker to create an identical, malicious network which could trick your device into connecting to it; therefore allowing all data traffic to your device to unknowingly be routed through the attackers network. Read the [Motivations](#motivations) section for more information.
-
+ProbeOSX is a simple tool written in Bash which allows for Mac users to sniff for [probe requests](https://medium.com/@brannondorsey/wi-fi-is-broken-3f6054210fa5). This allows the user to get plain text information such as MAC addresses along with those devices previously connected and/or hidden networks. [Here](https://www.youtube.com/watch?v=Z8RHMUSYTiA&frags=pl%2Cwn) is a video showing how a Linux user may do the same sort of thing using a similar tool to ProbeOSX. As mentioned in the video, the information that is broadcasted in a probe request can allow for an attacker to create an identical, malicious network which could trick your device into connecting to it; therefore allowing all data traffic to your device to unknowingly be routed through the attackers network. 
 
 ## Usage
 
@@ -35,11 +34,7 @@ FCE998	Apple, Inc.
 ...
 ```
 
-4. Now, you will be asked if you would like to ignore repeated requests I.e. if a device requests the same network repeatedly, you will only be shown it once. This is highly recommended both due to the fact that it is far easier to interpret the data when this option is turned on but also due to the fact that there are very limited cases where you may need to see every single request.
-
-5. Finally, you will be prompted with a screen asking you to verify the Wi-Fi interface, whether you want to use  the detailed output and if you do; where it is located along with verifying whether you want to ignore identical requests and ensuring that you have read the [Terms of Use](#terms-of-use).
-
-6. After agreeing, you will be supplied with a start time along with a short summary of what the script is doing and the script will start to sort the probe requests. You will also receive a message like this:
+4. Finally, you will be supplied with a start time along with a short summary of what the script is doing and the script will start to sort the probe requests. You will also receive a message like this:
 ```
 tcpdump: verbose output suppressed, use -v or -vv for full protocol decode
 listening on en0, link-type IEEE802_11_RADIO (802.11 plus radiotap header), capture size 256 bytes
@@ -49,9 +44,7 @@ You can simply ignore this message. Now, the intercepted probe requests should c
 
 ![Example](https://image.ibb.co/i7sxo9/Screen.png)
 
-It is important to note that the script automatically eliminates any "bad" probe requests, I.e. any that contain `bad-fcs` or and which have an empty target network in an effort to make it easier for the user to interpret.
-
-When you want to stop your scan, simple press `control` + `c`.
+**When you want to stop** your scan, simple press `control` + `c`.
 
 ### Interpreting the output
 
@@ -78,6 +71,6 @@ Below is a (very) rough guide for interpreting the signal strength:
 
 If you downloaded via `git clone`, you can simple run the following command to remove ProbeOSX:
 ```
-sudo rm -r $HOME/ProbeOSX
+sudo rm -r ~/ProbeOSX
 ```
 
