@@ -42,9 +42,13 @@ else
   ignoreidenticalonoff="1"
 fi
 
-wifihardwareline="$( networksetup -listallhardwareports | grep -Fn 'Wi-Fi' | cut -d: -f1 )"
-interfaceline=$(($wifihardwareline + 1))
-wifiinterfacename="$( networksetup -listallhardwareports | sed ''"${interfaceline}"'!d' | cut -d " " -f 2 )"
+if [[ "$@" == *"-i"* ]]; then
+  wifiinterfacename="$( echo "$@" | sed -n -e 's/^.*-i //p' | cut -d\  -f1 )"
+else
+  wifihardwareline="$( networksetup -listallhardwareports | grep -Fn 'Wi-Fi' | cut -d: -f1 )"
+  interfaceline=$(($wifihardwareline + 1))
+  wifiinterfacename="$( networksetup -listallhardwareports | sed ''"${interfaceline}"'!d' | cut -d " " -f 2 )"
+fi
 
 if [ ! -f $DIR/mac-vendor.txt ]; then
   printf "${REDT}[!] ${NC}ERROR: No \"mac-vendor.txt\" file found in my directory, quitting..."
