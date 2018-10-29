@@ -36,6 +36,12 @@ else
   analysis="1"
 fi
 
+if [[ "$@" == *"-v"* ]]; then
+  ignoreidenticalonoff="0"
+else
+  ignoreidenticalonoff="1"
+fi
+
 wifihardwareline="$( networksetup -listallhardwareports | grep -Fn 'Wi-Fi' | cut -d: -f1 )"
 interfaceline=$(($wifihardwareline + 1))
 wifiinterfacename="$( networksetup -listallhardwareports | sed ''"${interfaceline}"'!d' | cut -d " " -f 2 )"
@@ -47,8 +53,6 @@ if [ ! -f $DIR/mac-vendor.txt ]; then
 fi
 
 sudo echo
-
-ignoreidenticalonoff="1" #Set to "0" if you want to see ALL probe requests
 
 clear
 
@@ -151,18 +155,18 @@ tcpdump -l -I -i $wifiinterfacename -e -s 256 type mgt subtype probe-req 2> /dev
       echo
       printf "%-35s ${DUN}%-2s${NC}" "" "ANALYSIS"
       echo
-      echo
 
       count="1"
       while read -r line; do
+          echo
           printf "${DARKGRAY}"
           echo "$count. $line" | fmt -c -w $COLUMNS
           printf "${NC}"
 
-          echo "$inividuallinearray" | grep "$line" | xargs -L1 | sed -n -e 's/^.*~//p' | cut -d\) -f1 | fmt -c -w $COLUMNS
+          echo "$inividuallinearray" | grep "$line" | sort -u | xargs -L1 | sed -n -e 's/^.*~//p' | cut -d\) -f1 | fmt -c -w $COLUMNS
 
           count=$(($count + 1))
-      done < <(echo $repeatmac)
+      done < <(echo "$repeatmac")
       echo
       echo "--------------------------------------------------------------------------------"
       echo
