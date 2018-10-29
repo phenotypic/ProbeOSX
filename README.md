@@ -40,7 +40,7 @@ FCE998	Apple, Inc.
 
 ### Interpreting the output
 
-The table below contains a short description of all of the data outputted by the more detailed option and therefore people using the simple output should only concern themselves with the rows about MAC Addresses and Target Networks:
+The table below contains a short description of all of the data outputted by the script:
 
 | Name | Description |
 | --- | --- |
@@ -50,9 +50,10 @@ The table below contains a short description of all of the data outputted by the
 | `Target Network` | This is the name (SSID) of network which the device has requested to connect to. |
 | `Vendor` | This is the manufacturer of whichever device has made the request; determined by the first 6 characters of the MAC. |
 
+If you have enabled verbose output (`-v`) or have intercepted multiple probe requests from one MAC address asking for multiple networks and haven't suppressed the analysis with `-na`, then you will recieve an analysis following the scan which will show the multiple networks that each MAC address has requested.
+
 ## Removal
 
 ```
 sudo rm -r ~/ProbeOSX
 ```
-
