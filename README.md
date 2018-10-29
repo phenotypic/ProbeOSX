@@ -50,15 +50,6 @@ As mentioned above, there are two different options when it comes to outputting 
 | Target Network | This is the name  (SSID) of network which the device has requested to connect to in plain text. |
 | Vendor | This is the manufacturer of whichever device has made the request. This is determined by the first 6 characters of the MAC. |
 
-Below is a (very) rough guide for interpreting the signal strength:
-
-| Strength | Interpretation |
-| --- | --- |
-| x ≥ -30dBm | Very strong signal (Very close) |
-| -30dBm> x ≥-60dBm | Good signal (Rather close) |
-| -60dBm> x ≥-70dBm | Decent signal (Fairly close) |
-| x <-70dBm | Weak signal (Far away) |
-
 ## Removal
 
 If you downloaded via `git clone`, you can simple run the following command to remove ProbeOSX:
