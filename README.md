@@ -40,19 +40,18 @@ FCE998	Apple, Inc.
 
 ### Interpreting the output
 
-As mentioned above, there are two different options when it comes to outputting probe requests using this script with one being more detailed than the other. The table below contains a short description of all of the data outputted by the more detailed option and therefore people using the simple output should only concern themselves with the rows about MAC Addresses and Target Networks:
+The table below contains a short description of all of the data outputted by the more detailed option and therefore people using the simple output should only concern themselves with the rows about MAC Addresses and Target Networks:
 
 | Name | Description |
 | --- | --- |
-| Time | Rather self explanatory, this is the time at which the probe request was originally sent (in Hours:Minutes:Seconds). |
-| Signal | This is the signal strength of the probe request when received by your computer in dBm. The closer the value is to 0, the stronger the signal. Look below for more information |
-| MAC address | This is the combination of 6 groups of 2 numbers and letters which is unique to every device with Wi-Fi capability. Can be used to fingerprint each device. |
-| Target Network | This is the name  (SSID) of network which the device has requested to connect to in plain text. |
-| Vendor | This is the manufacturer of whichever device has made the request. This is determined by the first 6 characters of the MAC. |
+| `Time` | The time the probe request was sent (in Hours:Minutes:Seconds). |
+| `Signal` | This is the signal strength of the probe request when received by your computer in dBm. The closer the value is to 0, the stronger the signal. |
+| `MAC address` | Address unique to every device with Wi-Fi capability, may be used to fingerprint a device (can be spoofed). |
+| `Target Network` | This is the name (SSID) of network which the device has requested to connect to. |
+| `Vendor` | This is the manufacturer of whichever device has made the request; determined by the first 6 characters of the MAC. |
 
 ## Removal
 
-If you downloaded via `git clone`, you can simple run the following command to remove ProbeOSX:
 ```
 sudo rm -r ~/ProbeOSX
 ```
