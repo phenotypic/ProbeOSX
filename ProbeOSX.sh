@@ -160,16 +160,14 @@ tcpdump -l -I -i $wifiinterfacename -e -s 256 type mgt subtype probe-req 2> /dev
       printf "%-35s ${DUN}%-2s${NC}" "" "ANALYSIS"
       echo
 
-      count="1"
       while read -r line; do
           echo
           printf "${DARKGRAY}"
-          echo "$count. $line" | fmt -c -w $COLUMNS
+          echo "$line" | fmt -c -w $COLUMNS
           printf "${NC}"
 
           echo "$inividuallinearray" | grep "$line" | sort -u | xargs -L1 | sed -n -e 's/^.*~//p' | cut -d\) -f1 | fmt -c -w $COLUMNS
 
-          count=$(($count + 1))
       done < <(echo "$repeatmac")
       echo
       echo "--------------------------------------------------------------------------------"
