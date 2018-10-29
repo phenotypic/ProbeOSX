@@ -14,19 +14,21 @@ git clone https://github.com/Tommrodrigues/ProbeOSX
 bash ~/ProbeOSX/ProbeOSX.sh
 ```
 
-The script was designed with ease of use in mind so most people shouldn't find it too hard to work themselves through the various options. However, if you would like more guidance or information, read below:
+The script is fairly easy to use, simply run it using the command above to recieve the standart output. Here are some flags you can add if you would like more or less output:
 
-1. After starting the script with `bash ~/ProbeOSX/ProbeOSX.sh`, you will first be prompted with a message asking you to verify whether the auto-detected Wi-Fi interface is indeed correct. You can check this by holding down the `option` key and then clicking on the Wi-Fi icon on the top of your screen which should read on the top line"`Interface Name: <interface>`". If the listed interface does not match that of the auto-detected one then choose `n` and proceed to enter the correct interface when prompted, otherwise, select `y`.
-
-2. Now, you will be asked whether you want to use the detailed output (y) or the simple output (n). It is recommended that you use the detailed output, but the simple output can be useful in some circumstances.
-The output formats are as below:
-
-| Type | Contents |
+| Flag | Description |
 | --- | --- |
-| Detailed output | `<Time> <Signal strength> <MAC Address> <Target network> <Vendor>` |
-| Simple output | `<MAC Address> <Target network>` |
+| `-v` | Verbose: Show **ALL** prove requests, even those from the same MAC address asking for the same network. Not recommended |
+| `-na` | No analysis: Mutes the analysis feature at the end of a scan |
+| `-i <interface>` | Interface: Manually set Wi-Fi interface (script should normally auto-detect the correct interface) |
 
-3. Next, if you selected detailed output, the script should auto-detect the MAC vendor list included in the repository and ask you if this is the one you want to use. If either the script does not detect the included MAC vendor list or you would like to use a custom list, follow the on screen instructions.  If you would like to use a custom lookup table, make sure it follows this format:
+Here is an example output (**obsolete**):
+
+![Example](https://image.ibb.co/i7sxo9/Screen.png)
+
+### Notes
+
+The script will only run if there is a MAC address lookup table in its directory called `mac-vendor.txt`. A file is included in the repository so it shouldn't be a problem. However, if you would like to use a custom lookup table, make sure it follows this format:
 ```
 <VENDORID>	<VENDORNAME>
 00000E	Fujitsu
@@ -34,17 +36,7 @@ FCE998	Apple, Inc.
 ...
 ```
 
-4. Finally, you will be supplied with a start time along with a short summary of what the script is doing and the script will start to sort the probe requests. You will also receive a message like this:
-```
-tcpdump: verbose output suppressed, use -v or -vv for full protocol decode
-listening on en0, link-type IEEE802_11_RADIO (802.11 plus radiotap header), capture size 256 bytes
-```
-
-You can simply ignore this message. Now, the intercepted probe requests should come flooding in as shown in the example below:
-
-![Example](https://image.ibb.co/i7sxo9/Screen.png)
-
-**When you want to stop** your scan, simple press `control` + `c`.
+**When you want to stop** your scan, simply press `control` + `c`.
 
 ### Interpreting the output
 
