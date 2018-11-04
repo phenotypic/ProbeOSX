@@ -1,4 +1,4 @@
-# ProbeOSX (WIP)
+# ProbeOSX
 #### A simple tool for macOS to capture and interpret probe requests.
 
 
