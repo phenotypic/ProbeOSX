@@ -72,7 +72,7 @@ DATE="$( date '+%d/%m/%Y %H:%M:%S' )"
 echo
 echo "Scan started: $DATE" | fmt -c -w $COLUMNS
 echo
-echo "Capturing all probe requests with \"$wifiinterfacename\"..." | fmt -c -w $COLUMNS
+echo "Capturing probe requests with \"$wifiinterfacename\"..." | fmt -c -w $COLUMNS
 echo "(Stop scan with \"control\"+\"c\")" | fmt -c -w $COLUMNS
 echo
 echo "--------------------------------------------------------------------------------"
@@ -88,7 +88,7 @@ printf "${NC}"
 ARRAY=""
 MACARRAY=""
 
-tcpdump -l -I -i $wifiinterfacename -e -s 256 type mgt subtype probe-req 2> /dev/null | while read line; do
+sudo tcpdump -l -I -i $wifiinterfacename -e -s 256 type mgt subtype probe-req 2> /dev/null | while read line; do
 
   if [[ "$line" == *"bad-fcs"* ]]; then
     continue
