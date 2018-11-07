@@ -25,10 +25,19 @@ cat << "EOF"
                | |   | | | (_) | |_) |  __/ |__| |____) |/ . \
                |_|   |_|  \___/|_.__/ \___|\____/|_____//_/ \_\
 
-                               (Version: 1.0)
-
     GitHub : https://github.com/Tommrodrigues/ProbeOSX
+
 EOF
+
+if [[ "$@" == *"-h"* ]]; then
+  echo "Help:"
+  printf "   ${DARKGRAY}-h               ${NC}| Show this text\n"
+  printf "   ${DARKGRAY}-v               ${NC}| Display all probe requests\n"
+  printf "   ${DARKGRAY}-na              ${NC}| Do not display analysis at the end of scan\n"
+  printf "   ${DARKGRAY}-i <interface>   ${NC}| Manually define a Wi-Fi interface\n"
+  echo
+  exit
+fi
 
 if [[ "$@" == *"-na"* ]]; then
   analysis="0"
