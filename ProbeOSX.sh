@@ -68,11 +68,9 @@ convertsecs() {
 }
 
 start=$SECONDS
-DATE="$( date '+%d/%m/%Y %H:%M:%S' )"
+DATE="$( date +"%T" )"
 echo
 echo "Scan started: $DATE" | fmt -c -w $COLUMNS
-echo
-echo "Capturing probe requests with \"$wifiinterfacename\"..." | fmt -c -w $COLUMNS
 echo "(Stop scan with \"control\"+\"c\")" | fmt -c -w $COLUMNS
 echo
 echo "--------------------------------------------------------------------------------"
@@ -134,16 +132,15 @@ sudo tcpdump -l -I -i $wifiinterfacename -e -s 256 type mgt subtype probe-req 2>
 
     set -e
     function cleanup {
-      DATE="$( date '+%d/%m/%Y %H:%M:%S' )"
+      DATE="$( date +"%T" )"
       duration=$(( SECONDS - start ))
       echo
       echo
       echo "--------------------------------------------------------------------------------"
       echo
-      echo "SCAN STOPPED" | fmt -c -w $COLUMNS
 
       duration="$( echo $(convertsecs $duration) )"
-      echo "Time ended: $DATE ($duration)" | fmt -c -w $COLUMNS
+      echo "Scan stopped: $DATE ($duration)" | fmt -c -w $COLUMNS
       echo
 
       repeatmac="$( echo "$ARRAY" | grep -o -E '([[:xdigit:]]{1,2}:){5}[[:xdigit:]]{1,2}' | sort | uniq -c | grep -v "1 " | grep -o -E '([[:xdigit:]]{1,2}:){5}[[:xdigit:]]{1,2}' )"
