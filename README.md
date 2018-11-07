@@ -18,7 +18,8 @@ The script is fairly easy to use, simply run it using the command above to recie
 
 | Flag | Description |
 | --- | --- |
-| `-v` | Verbose: Show **ALL** prove requests, even those from the same MAC address asking for the same network. Not recommended |
+| `-h` | Help: Display all availabe flags |
+| `-v` | Verbose: Show **ALL** probe requests, even those from the same MAC address asking for the same network. Not recommended |
 | `-na` | No analysis: Mutes the analysis feature at the end of a scan |
 | `-i <interface>` | Interface: Manually set Wi-Fi interface (script should normally auto-detect the correct interface) |
 
