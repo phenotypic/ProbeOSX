@@ -15,7 +15,7 @@ DUN='\033[1;30;4m'
 ostype="$( uname -s )"
 COLUMNS=$(tput cols)
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null && pwd )"
-TERMINALCOLOUR="$( defaults read -g AppleInterfaceStyle )"
+TERMINALCOLOUR="$( defaults read -g AppleInterfaceStyle 2>/dev/null )"
 
 if [[ "$TERMINALCOLOUR" == *"Dark"* ]]; then
   DARKGRAY='\033[1;37m'
