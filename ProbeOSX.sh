@@ -15,6 +15,17 @@ DUN='\033[1;30;4m'
 ostype="$( uname -s )"
 COLUMNS=$(tput cols)
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null && pwd )"
+TERMINALCOLOUR="$( defaults read -g AppleInterfaceStyle )"
+
+if [[ "$TERMINALCOLOUR" == *"Dark"* ]]; then
+  DARKGRAY='\033[1;37m'
+  DUN='\033[1;37;4m'
+else
+  DARKGRAY='\033[1;30m'
+  DUN='\033[1;30;4m'
+fi
+
+printf "${NC}"
 
 clear
 cat << "EOF"
