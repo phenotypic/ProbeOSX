@@ -23,7 +23,7 @@ The script is fairly easy to use, simply run it using the command above to recie
 | `-na` | No analysis: Mutes the analysis feature at the end of a scan |
 | `-i <interface>` | Interface: Manually set Wi-Fi interface (script should normally auto-detect the correct interface) |
 
-Here some example output:
+Here is some example output:
 
 ![Example](https://i.ibb.co/dmk7bdW/Screenshot-2018-12-14-at-18-48-35.png)
 
@@ -37,7 +37,7 @@ FCE998	Apple, Inc.
 ...
 ```
 
-**When you want to stop** your scan, simply press `control` + `c`.
+**When you want to stop**, simply press `control` + `c`.
 
 ### Interpreting the output
 
