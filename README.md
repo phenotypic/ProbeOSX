@@ -25,7 +25,7 @@ The script is fairly easy to use, simply run it using the command above to recie
 
 Here is an example output (**obsolete**):
 
-![Example](https://image.ibb.co/i7sxo9/Screen.png)
+![Example](https://i.ibb.co/dmk7bdW/Screenshot-2018-12-14-at-18-48-35.png)
 
 ### Notes
 
