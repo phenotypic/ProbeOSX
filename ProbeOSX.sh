@@ -98,13 +98,7 @@ echo
 
 sudo airport -z
 
-printf "${DARKGRAY}"
-printf "%-9s %-8s %-19s %-17s %-10s" "Time" "Signal" "MAC Address" "Target network" "Vendor"
-printf "${NC}"
-
-
-ARRAY=""
-MACARRAY=""
+printf "${DUN}%-4s${NC} %-4s ${DUN}%-4s${NC} %-1s ${DUN}%-5s${NC} %-7s ${DUN}%-6s${NC} %-2s ${DUN}%-6s${NC}" "Time" "" "Signal" "" "MAC Address" "" "Target network" "" "Vendor"
 
 sudo tcpdump -l -I -i $wifiinterfacename -e -s 256 type mgt subtype probe-req 2> /dev/null | while read line; do
 
