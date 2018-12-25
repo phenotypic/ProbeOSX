@@ -10,7 +10,7 @@ ProbeOSX is a simple tool which allows for Mac users to sniff for [probe request
 
 Download and run the script with:
 ```
-git clone https://github.com/Tommrodrigues/ProbeOSX
+git clone https://github.com/Tommrodrigues/ProbeOSX.git
 bash ~/ProbeOSX/ProbeOSX.sh
 ```
 
