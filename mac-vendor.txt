@@ -13725,7 +13725,7 @@
 14E6E4	TP-LINK TECHNOLOGIES CO.,LTD.
 14E7C8	Integrated Device Technology (Malaysia) Sdn. Bhd.
 14EB33	BSMediasoft Co., Ltd.
-14EDA5	Wächter GmbH Sicherheitssysteme
+14EDA5	Wächter GmbH Sicherheitssysteme
 14EDBB	2Wire Inc
 14EDE4	Kaiam Corporation
 14EE9D	AirNav Systems LLC
@@ -21531,7 +21531,7 @@ D85DEF	Busch-Jaeger Elektro GmbH
 D85DFB	Private
 D860B0	bioMérieux Italia S.p.A.
 D860B3	Guangdong Global Electronic Technology CO.，LTD
-D86194	Objetivos y Sevicios de Valor Añadido
+D86194	Objetivos y Sevicios de Valor Añadido
 D862DB	Eno Inc.
 D86595	Toy's Myth Inc.
 D866C6	Shenzhen Daystar Technology Co.,ltd
