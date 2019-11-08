@@ -94,7 +94,7 @@ echo
 echo "--------------------------------------------------------------------------------"
 echo
 
-sudo airport -z
+sudo /System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport -z
 
 printf "${DUN}%-4s${NC} %-4s ${DUN}%-4s${NC} %-1s ${DUN}%-5s${NC} %-7s ${DUN}%-6s${NC} %-2s ${DUN}%-6s${NC}" "Time" "" "Signal" "" "MAC Address" "" "Target network" "" "Vendor"
 
