@@ -1,6 +1,4 @@
 # ProbeOSX
-#### Capture and interpret probe requests with macOS
-
 
 ## What is it?
 
