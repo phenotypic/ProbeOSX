@@ -1,7 +1,5 @@
 # ProbeOSX
 
-## What is it?
-
 ProbeOSX is a simple tool which allows for Mac users to sniff for [probe requests](https://medium.com/@brannondorsey/wi-fi-is-broken-3f6054210fa5). This allows you to get plain text information like MAC addresses along with those devices previously connected and/or hidden networks.
 
 [Here](https://www.youtube.com/watch?v=Z8RHMUSYTiA&frags=pl%2Cwn) is a video showing how a Linux user may do the same sort of thing using a similar tool to ProbeOSX. The information broadcasted in a probe request could allow an attacker to create an identical, malicious network which could trick your device into connecting to it; therefore allowing all data traffic to your device to unknowingly be routed through the attacker. 
