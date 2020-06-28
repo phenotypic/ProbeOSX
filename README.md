@@ -6,11 +6,16 @@ ProbeOSX is a simple tool which allows for Mac users to sniff for [probe request
 
 ## Usage
 
-Download and run the script with:
+Download with:
 ```
 git clone https://github.com/Tommrodrigues/ProbeOSX.git
-bash ~/ProbeOSX/ProbeOSX.sh
 ```
+
+Run with:
+```
+bash ProbeOSX.sh
+```
+
 
 The script is fairly easy to use, simply run it using the command above to recieve the standart output. Here are some flags you can add if you would like more or less output:
 
