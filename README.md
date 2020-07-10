@@ -11,7 +11,7 @@ Download with:
 git clone https://github.com/Tommrodrigues/ProbeOSX.git
 ```
 
-Run with:
+Run from same directory with:
 ```
 bash ProbeOSX.sh
 ```
