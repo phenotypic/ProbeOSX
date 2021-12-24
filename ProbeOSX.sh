@@ -36,7 +36,7 @@ cat << "EOF"
                | |   | | | (_) | |_) |  __/ |__| |____) |/ . \
                |_|   |_|  \___/|_.__/ \___|\____/|_____//_/ \_\
 
-    GitHub : https://github.com/Tommrodrigues/ProbeOSX
+    GitHub : https://github.com/phenotypic/ProbeOSX
 
 EOF
 

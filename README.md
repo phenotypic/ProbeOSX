@@ -8,7 +8,7 @@ ProbeOSX is a simple tool which allows for Mac users to sniff for [probe request
 
 Download with:
 ```
-git clone https://github.com/Tommrodrigues/ProbeOSX.git
+git clone https://github.com/phenotypic/ProbeOSX.git
 ```
 
 Run from same directory with:
