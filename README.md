@@ -1,8 +1,8 @@
 # ProbeOSX
 
-ProbeOSX is a simple tool which allows for Mac users to sniff for [probe requests](https://medium.com/@brannondorsey/wi-fi-is-broken-3f6054210fa5). This allows you to get plain text information like MAC addresses along with those devices previously connected and/or hidden networks.
+ProbeOSX allows macOS users to sniff for [probe requests](https://medium.com/@brannondorsey/wi-fi-is-broken-3f6054210fa5) and obtain plain text information like MAC addresses and previously connected networks.
 
-[This](https://www.youtube.com/watch?v=Z8RHMUSYTiA&frags=pl%2Cwn) video shows how a Linux user may do the same sort of thing using a similar tool to ProbeOSX. The information broadcasted in a probe request could allow an attacker to create an identical, malicious network which could trick your device into connecting to it; therefore allowing all data traffic to your device to unknowingly be routed through the attacker. 
+This information could allow an attacker to maliciously clone a network and trick devices into connecting, thereby routing all traffic through the attacker. [This](https://www.youtube.com/watch?v=Z8RHMUSYTiA&frags=pl%2Cwn) video shows how a Linux user may do this using a similar tool.
 
 ## Usage
 
@@ -33,6 +33,7 @@ Here is some example output:
 ### Notes
 
 The script will only run if there is a MAC address lookup table in its directory called `mac-vendor.txt`. A file is included in the repository so it shouldn't be a problem. However, if you would like to use a custom lookup table, make sure it follows this format:
+
 ```
 <VENDORID>	<VENDORNAME>
 00000E	Fujitsu
