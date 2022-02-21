@@ -16,8 +16,7 @@ Run from same directory with:
 bash ProbeOSX.sh
 ```
 
-
-The script is fairly easy to use, simply run it using the command above to recieve the standart output. Here are some flags you can add if you would like more or less output:
+The script is fairly easy to use, simply run it using the command above. Here are some flags you can add:
 
 | Flag | Description |
 | --- | --- |
@@ -25,10 +24,6 @@ The script is fairly easy to use, simply run it using the command above to recie
 | `-v` | Verbose: Show **ALL** probe requests, even those from the same MAC address asking for the same network. Not recommended |
 | `-na` | No analysis: Mutes the analysis feature at the end of a scan |
 | `-i <interface>` | Interface: Manually set Wi-Fi interface (script should normally auto-detect the correct interface) |
-
-Here is some example output:
-
-![Example](https://i.ibb.co/nP3ynSm/Screenshot-2018-12-18-at-09-46-17.png)
 
 ### Notes
 
